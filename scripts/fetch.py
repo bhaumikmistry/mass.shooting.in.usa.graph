@@ -14,6 +14,7 @@ def run(ips, op):
             if date not in total_data:
                 total_data[date] = 0
             total_data[date] = int(d["killed"]) + total_data[date]
+            print(date, total_data[date], d["killed"])
         f.close()
     with open(op, 'w') as f:
         json.dump(total_data, f)
