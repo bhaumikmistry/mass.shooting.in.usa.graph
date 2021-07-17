@@ -3,8 +3,8 @@
 /* Grid-related CSS */
 
 :root {
-    --square-size: 15px;
-    --square-gap: 5px;
+    --square-size: 12px;
+    --square-gap: 4px;
     --week-width: calc(var(--square-size) + var(--square-gap));
 }
 
@@ -24,6 +24,12 @@ grid-template-areas: "empty months"
                         "days squares";
 grid-template-columns: auto 1fr;
 grid-gap: 10px;
+}
+
+.title {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .months {
