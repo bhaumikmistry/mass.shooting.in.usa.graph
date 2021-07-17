@@ -35,6 +35,11 @@ var year = 2022
 graph.innerHTML += prepare_html_element("2020")
 graph.innerHTML += prepare_html_element("2021")
 
+// sleep time expects milliseconds
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 get_data().then(
   function (data) {
     console.log("get_data().then");
@@ -55,15 +60,18 @@ get_data().then(
       if (!level){
         level = 0
       }
+      if (level>9){
+        level = 9
+      }
       id = 'squares-' + year
       console.log(id);
       const squares = document.getElementById(id);
+      // Usage!
       squares.insertAdjacentHTML(
         'beforeend', 
         `<li style="background-color:${color[level]}" data-level="${level}" title="Date: ${date} Killed: ${death}"></li>`
         );
-
-    })
+    });
 
     // for (var i = 1; i < today_day_number; i++) {
     //   date_str = map_number_to_date(i);
