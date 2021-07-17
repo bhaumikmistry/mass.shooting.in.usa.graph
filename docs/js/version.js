@@ -1,3 +1,3 @@
-var version = "0.1.4"
+var version = "0.1.5"
 var bump = "0"
 console.log("weather.in.github.contrib.graph " + version)
