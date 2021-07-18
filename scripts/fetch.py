@@ -27,13 +27,20 @@ def run(ips, op):
     for year in years:
         start_date = datetime.date(int(year), 1, 1)
         end_date = datetime.date(int(year), 12, 31)
+        today = datetime.date.today()
+        
         delta = datetime.timedelta(days=1)
         while start_date <= end_date:
             date_str = start_date.strftime('%m/%d/%Y')
+            if start_date > today:
+                print(f"ignoring {start_date} > {today}")
+                start_date += delta
+                continue
             print(date_str)
             if date_str not in total_data:
                 total_data[date_str] = 0
             start_date += delta
+
 
     print(len(total_data.keys()))
 
