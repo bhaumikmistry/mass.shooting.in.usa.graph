@@ -32,8 +32,16 @@ prepare_html_element = function(year) {
 
 var graph = document.getElementById("graph-holder");
 var year = 2022
-graph.innerHTML += prepare_html_element("2020")
+
 graph.innerHTML += prepare_html_element("2021")
+graph.innerHTML += prepare_html_element("2020")
+graph.innerHTML += prepare_html_element("2019")
+graph.innerHTML += prepare_html_element("2018")
+graph.innerHTML += prepare_html_element("2017")
+graph.innerHTML += prepare_html_element("2016")
+graph.innerHTML += prepare_html_element("2015")
+graph.innerHTML += prepare_html_element("2014")
+graph.innerHTML += prepare_html_element("2013")
 
 // sleep time expects milliseconds
 function sleep (time) {
