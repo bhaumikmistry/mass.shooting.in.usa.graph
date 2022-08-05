@@ -170,7 +170,7 @@ display: inherit;
 nav ul ul li {
 width: auto;
 font-size: 10px;
-float: none;
+float: none;    
 display: list-item;
 position: relative;
 }
