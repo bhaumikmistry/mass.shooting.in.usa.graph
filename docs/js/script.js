@@ -31,8 +31,9 @@ prepare_html_element = function(year) {
 }
 
 var graph = document.getElementById("graph-holder");
-var year = 2022
+var year = 2023
 
+graph.innerHTML += prepare_html_element("2023")
 graph.innerHTML += prepare_html_element("2022")
 graph.innerHTML += prepare_html_element("2021")
 graph.innerHTML += prepare_html_element("2020")
